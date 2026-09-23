@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --wof-green: #22a06b;
+  --wof-amber: #f2b84b;
+  --wof-red: #d64545;
+  --wof-blue: #1769aa;
+  --wof-dark: #156bc2;
+  --wof-grey: #6b7280;
+  --wof-light: #f4f7f9;
+  --wof-border: #dfe5e9;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--wof-light);
+  color: var(--wof-dark);
+}
+.wof-header {
+  background: var(--wof-dark);
+  color: #fff;
+  padding: 28px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wof-header h1 {
+  margin: 5px 0;
+  font-size: 32px;
+}
+.wof-header p {
+  margin: 0;
+  color: #cbd5dc;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8fd3b5;
+}
+.wof-badge {
+  width: 72px;
+  height: 72px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 800;
+}
+.container {
+  max-width: 1150px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+section {
+  margin-bottom: 22px;
+}
+.client-card,
+.score-card,
+.status-card,
+.category {
+  background: #fff;
+  border: 1px solid var(--wof-border);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+h2 {
+  margin-top: 0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+label {
+  font-size: 13px;
+  font-weight: 700;
+}
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px;
+  border: 1px solid #ccd4da;
+  border-radius: 7px;
+  font: inherit;
+  background: #fff;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.score-card span,
+.status-card span {
+  font-size: 13px;
+  color: var(--wof-grey);
+  font-weight: 700;
+}
+.score-card strong {
+  display: block;
+  font-size: 42px;
+  margin: 8px 0;
+}
+.progress {
+  height: 12px;
+  background: #e7ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progressBar {
+  height: 100%;
+  width: 0;
+  background: var(--wof-grey);
+  transition: 0.3s;
+}
+#scoreLabel {
+  display: block;
+  margin-top: 8px;
+  color: var(--wof-grey);
+}
+.status-card strong {
+  display: inline-block;
+  margin: 12px 0 5px;
+}
+.status-card p {
+  margin: 0;
+  color: #59636d;
+}
+.status-badge {
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.status-green {
+  background: #dff4e9;
+  color: #16734b;
+}
+.status-amber {
+  background: #fff0cf;
+  color: #8a6200;
+}
+.status-red {
+  background: #fbe0e0;
+  color: #9d2929;
+}
+.status-grey {
+  background: #e8ecef;
+  color: #5b6670;
+}
+.category {
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.category-header {
+  padding: 17px 20px;
+  background: #f8fafb;
+  border-bottom: 1px solid var(--wof-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category-header h3 {
+  margin: 0;
+}
+.category-score {
+  font-weight: 800;
+}
+.check-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 14px;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #edf0f2;
+}
+.check-row:last-child {
+  border-bottom: 0;
+}
+.check-name {
+  font-weight: 700;
+}
+.check-help {
+  font-size: 12px;
+  color: var(--wof-grey);
+  margin-top: 3px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 18px;
+  background: #e7ecef;
+  color: var(--wof-dark);
+  font-weight: 700;
+  cursor: pointer;
+}
+button.primary {
+  background: var(--wof-blue);
+  color: #fff;
+}
+.report-card {
+  background: #fff;
+  border: 1px solid var(--wof-border);
+  border-radius: 12px;
+  padding: 22px;
+}
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.report-item {
+  padding: 14px;
+  border-radius: 8px;
+  background: #f6f8f9;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--wof-grey);
+  font-size: 12px;
+}
+@media (max-width: 750px) {
+  .form-grid,
+  .summary-grid,
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+  .check-row {
+    grid-template-columns: 1fr;
+  }
+  .wof-header {
+    padding: 22px 5%;
+  }
+  .wof-badge {
+    width: 58px;
+    height: 58px;
+  }
+}
+@media print {
+  .actions {
+    display: none;
+  }
+  body {
+    background: #fff;
+  }
+  .container {
+    max-width: none;
+  }
+  .client-card,
+  .score-card,
+  .status-card,
+  .category,
+  .report-card {
+    box-shadow: none;
+  }
+}

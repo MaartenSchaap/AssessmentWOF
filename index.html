@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Assessment | Website WOF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wof-header">
+    <div>
+      <span class="eyebrow">WEBSITE WOF™</span>
+      <h1>Website Assessment</h1>
+      <p>Practical website health, security, SEO and ownership assessment.</p>
+    </div>
+    <div class="wof-badge">WOF</div>
+  </header>
+
+  <main class="container">
+    <section class="client-card">
+      <h2>Assessment Details</h2>
+      <div class="form-grid">
+        <label>Website URL
+          <input id="siteUrl" type="url" placeholder="https://example.co.nz">
+        </label>
+        <label>Business / Client
+          <input id="clientName" type="text" placeholder="Client name">
+        </label>
+        <label>Assessment Date
+          <input id="assessmentDate" type="date">
+        </label>
+        <label>Assessor
+          <input id="assessor" type="text" placeholder="Assessor name">
+        </label>
+      </div>
+    </section>
+
+    <section class="summary-grid">
+      <div class="score-card">
+        <span>Overall WOF Score</span>
+        <strong id="score">0%</strong>
+        <div class="progress"><div id="progressBar"></div></div>
+        <small id="scoreLabel">Assessment not started</small>
+      </div>
+      <div class="status-card">
+        <span>WOF Status</span>
+        <strong id="overallStatus" class="status-badge status-grey">NOT ASSESSED</strong>
+        <p id="summaryText">Complete the checks below to generate an assessment summary.</p>
+      </div>
+    </section>
+
+    <section id="checks"></section>
+
+    <section class="actions">
+      <button class="primary" onclick="calculateAssessment()">Calculate WOF</button>
+      <button onclick="window.print()">Print / Save PDF</button>
+      <button onclick="resetAssessment()">Reset</button>
+    </section>
+
+    <section class="report-card">
+      <h2>Assessment Summary</h2>
+      <div id="reportSummary">Complete the assessment to generate your summary.</div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Website WOF™</strong> — Website Rescue & Assessment
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
